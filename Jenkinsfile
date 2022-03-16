@@ -13,5 +13,12 @@ pipeline {
       }
     }
 
+    stage('mvn') {
+      steps {
+        sh '''#!/bin/bash
+mvn clean package'''
+      }
+    }
+
   }
 }
