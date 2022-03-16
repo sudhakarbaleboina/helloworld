@@ -20,5 +20,11 @@ mvn clean package'''
       }
     }
 
+    stage('deploy') {
+      steps {
+        sh 'java jar target/*.jar'
+      }
+    }
+
   }
 }
